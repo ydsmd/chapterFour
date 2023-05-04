@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%DatacreatorForChapter4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         本文件生成第四章所需的数据集（图4.6和图4.7）         %
+%                         作者：余道洪                                         %
+%                         修改日期：2023.3.15                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 parameterSetting;
 N_perDay = 12;
 mu = 300;% 均值
@@ -7,11 +12,11 @@ Data = 55*norminv(x,mu,sigma); % 通过逆变换得到的正态分布的数据
 Sensor_Position = [-0.9,-0.3,0.3,0.9];
 Axle_Position = [72 87.6 88.8 104.4 105.6 121.2 122.4 138];
 AxleNum = length(Axle_Position);
-
-for i = 3 : N_perDay
+A = 2.25e-4;
+for i = 1 : N_perDay
     Mb = Data(i) + Mb;
     base = Mb*9.8/4+mw*9.8+0.5*9.8*Mv;
-    Savepath = ['D:\研究生\毕设\大论文\第五章\CODE\MeasureTime',num2str(i),'\'];
+    Savepath = ['D:\研究生\毕设\大论文\第四章\CODE\MeasureTime',num2str(i),'\'];
     if ~exist(Savepath)
         mkdir(Savepath);
     end
@@ -26,6 +31,7 @@ for i = 3 : N_perDay
             Flag = 1;
         elseif j ==4
             N1 = 9;
+            A = 2.25e-4;
             N2 = 0;
             Flag = 2;
         else

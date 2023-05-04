@@ -84,7 +84,7 @@ for k = 1:length(Dataset)
         tmpLabel = [2*i-1;2*i;2*i-1;2*i;2*i-1;2*i;2*i-1;2*i];
 
         Label = [Label;tmpLabel];    
-        eval(['save D:\研究生\毕设\大论文\第五章\CODE\dailyData\Dataset',num2str(k),'.mat Data Label;']);
+        eval(['save D:\研究生\毕设\大论文\第四章\CODE\dailyData2\Dataset',num2str(k),'.mat Data Label;']);
     end
 end
 

@@ -59,15 +59,15 @@ b = bar(S)
 set(b,'FaceColor',[142 207 201]/255)
 hold on 
 plot([0 17],[2.5 2.5],'--','LineWidth',3,'Color',[255 190 122]/255)
-text(2.5,S(3)+0.3,num2str(S(3)),'FontSize',12);
-text(6.3,S(7)+0.3,num2str(S(7)),'FontSize',12);
-text(7.5,S(8)+0.3,num2str(S(8)),'FontSize',12);
-text(10.5,S(11)+0.3,num2str(S(11)),'FontSize',12);
-text(14,3,'T=2.5','FontSize',18);
+text(2.5,S(3)+0.4,num2str(S(3)),'FontSize',12);
+text(3.5,S(4)+0.3,num2str(S(4)),'FontSize',12);
+text(7.5,S(8)+0.4,num2str(S(8)),'FontSize',12);
+text(10.5,S(11)+0.4,num2str(S(11)),'FontSize',12);
+text(13.5,3.5,'T=2.5','FontSize',16);
 xlim([1 16])
 ylim([0 15])
-xlabel('车轮编号','FontSize',18);
-ylabel('相对距离值','FontSize',18);
-title('一日内各车轮平均得分','FontSize',18);
-prettyAxes().gbase2()
-ylabel('相对距离值','FontSize',18);
+xlabel('车轮编号','FontSize',16);
+ylabel('相对距离值','FontSize',16);
+title('一日内各车轮平均得分','FontSize',16);
+prettyAxes().gbase()
+ylabel('相对距离值','FontSize',16);
